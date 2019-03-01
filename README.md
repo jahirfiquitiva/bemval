@@ -1,4 +1,4 @@
-# Basic Email Validator (beval)
+# Basic Email Validator (bemval)
 
 This is a super simple and/or basic example of an email validator without using external libraries. Just python std functions
 
