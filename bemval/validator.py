@@ -25,15 +25,15 @@ class EmailValidator:
         at_count = email.count('@')
 
         if at_count != 1:
-            less = 'Falta el @'
-            more = 'Hay %d \'@\'s' % at_count
+            less = 'Missing @'
+            more = 'There are %d \'@\'s' % at_count
             errors.append(less if at_count < 1 else more)
 
         after_at = ''
         try:
             after_at = email[email.rindex('@') + 1:]
             if after_at.count('.') < 1:
-                errors.append('Falta el . después del @')
+                errors.append('Missing . after @')
         except Exception:
             pass
 
@@ -42,14 +42,14 @@ class EmailValidator:
             if not self.__check_char__(ch):
                 invalid_chars.append(ch)
         for ch in invalid_chars:
-            errors.append('Caracter inválido: \'%s\'' % ch)
+            errors.append('Invalid character: \'%s\'' % ch)
 
         try:
             last_dot = after_at.rindex('.')
             last_part = after_at[last_dot + 1:]
             if not (2 <= len(last_part) <= 15):
-                text = 'La extensión de dominio debe tener entre 2 y 15 caracteres.'
-                errors.append(text + ' Se encontraron: %d' % len(last_part))
+                text = 'Domain extension must be between 2 and 15 characters long.'
+                errors.append(text + ' Found: %d characters.' % len(last_part))
         except Exception:
             pass
 
