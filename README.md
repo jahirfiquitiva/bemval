@@ -1,6 +1,6 @@
 # Basic Email Validator (bemval)
 
-This is a super simple and/or basic example of an email validator without using external libraries. Just python std functions
+Super simple and/or basic email validator without using external libraries (i.e. just python std functions)
 
 ## Installation
 

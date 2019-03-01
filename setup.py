@@ -10,13 +10,13 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="bemval",
-    version="0.0.6",
-    description="Easily validate emails",
+    version="0.0.7",
+    description="Super simple and/or basic email validator without using external libraries (i.e. just python std functions)",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/jahirfiquitiva/bemval",
-    author="Sebastian Mayorga - Jahir Fiquitiva",
-    author_email="hi@jahir.xyz",
+    author="Sebastian Mayorga, Jahir Fiquitiva",
+    author_email="sebastian@soundwave.vip, hi@jahir.xyz",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",

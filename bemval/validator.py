@@ -24,7 +24,9 @@ class EmailValidator:
         errors = []
 
         email = email.replace('[at]', '@')
+        email = email.replace('[.at]', '@')
         email = email.replace('[dot]', '.')
+        email = email.replace('[.dot]', '.')
 
         at_count = email.count('@')
 
