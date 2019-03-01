@@ -20,8 +20,12 @@ class EmailValidator:
     def __init__(self):
         pass
 
-    def validate(self, email):
+    def validate(self, email: str):
         errors = []
+
+        email = email.replace('[at]', '@')
+        email = email.replace('[dot]', '.')
+
         at_count = email.count('@')
 
         if at_count != 1:
